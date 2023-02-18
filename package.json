@@ -1,20 +1,34 @@
 {
-  "name": "licence-checker",
-  "version": "1.0.0",
+  "name": "tf-licence-checker",
+  "version": "1.1.0",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "tf-licence-checker": "index.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/techfides/tf-licence-checker.git"
+    "url": "git+ssh://git@github.com/TechFides/tf-licence-checker.git"
   },
   "dependencies": {
     "text-table": "^0.2.0",
     "yargs": "^17.6.2"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "author": "Techfides",
+  "license": "MIT",
+  "description": "Check allowed licences in your project",
+  "devDependencies": {
+    "@types/yargs": "^17.0.22"
+  },
+  "bugs": {
+    "url": "https://github.com/TechFides/tf-licence-checker/issues"
+  },
+  "homepage": "https://github.com/TechFides/tf-licence-checker#readme",
+  "directories": {
+    "example": "example"
+  }
 }
