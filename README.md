@@ -5,7 +5,7 @@ Check your installed packages and their licences against allowed licences list.
 
 Installation:
 ```
- npm install -g tf-lincence-checker
+ npm install -g tf-licence-checker
 ```
 
 Create config file in your project
