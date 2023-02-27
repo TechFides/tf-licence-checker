@@ -5,7 +5,7 @@ Check your installed packages and their licences against allowed licences list.
 
 Installation:
 ```
- npm install -g tf-licence-checker
+ npm install tf-licence-checker --save-dev
 ```
 
 Create config file in your project
@@ -30,6 +30,8 @@ const config = {
   package: './package.json',
   checkDevDependencies: true,
 }
+
+module.exports = config;
 ```
 
 Usage

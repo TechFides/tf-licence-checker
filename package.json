@@ -1,6 +1,6 @@
 {
   "name": "tf-licence-checker",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
