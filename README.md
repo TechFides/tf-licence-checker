@@ -5,11 +5,11 @@ Check your installed packages and their licences against allowed licences list.
 
 Installation:
 ```
- npm install tf-licence-checker --save-dev
+ npm install - g tf-licence-checker --save-dev
 ```
 
 Create config file in your project
-  * example: `license-checker.config.js`
+  * example: `licence-checker.config.js`
 
 Config options
 --------------
@@ -39,7 +39,16 @@ Usage
 
 Report show table with installed packages and blacklisted licences used in your project.
 ```
-npm run tf-licence-checker --config={pathToConfig}
+tf-licence-checker --config={pathToConfig}
+```
+Or you can add script to your package.json file
+```
+licence-checker: tf-licence-checker --config={pathToConfig}
+```
+
+and then run:
+```
+npm run licence-checker
 ```
 
 Table columns:
@@ -67,6 +76,12 @@ Gitlab CI/CD integration
 ------------------------
 You can create CI/CD job that will automatically check licence and fail the job if there are a forbidden licences.
 
+Create script in your package.json file
+
+```
+licence-checker: tf-licence-checker --config={pathToConfig}
+```
+and then add stage to your .gitlab-ci.yml file
 ```
 stages:
     - install
@@ -83,7 +98,7 @@ license:
       - node_modules/
     policy: pull
   script:
-    - npm run license-checker
+    - npm run licence-checker
   tags:
     - docker 
 ```
