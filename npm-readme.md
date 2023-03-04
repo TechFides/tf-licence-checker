@@ -8,8 +8,9 @@ How to publish new version
 5. Clone [licence-checker](https://github.com/TechFides/tf-licence-checker) project
 6. In your terminal login to NPM with techfides organization scope
    1. `npm login --scope=@techfides`
-7. Change the code and push your changes
-8. Change package version
+7. Change the code a commit changes
+8. Update package version
    1. `npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]`
-9. Publish new package version
-   1. `npm publish --access public`
+9. Push changes to git
+10. Publish new package version
+    1. `npm publish --access public`
