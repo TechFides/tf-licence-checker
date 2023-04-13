@@ -13,9 +13,7 @@ let config;
 if (fs.existsSync(path.resolve(process.cwd(), configPath))) {
     config = require(path.resolve(process.cwd(), configPath));
 } else {
-    throw new Error(
-        `Error: the file '${configPath}' is required to get config`,
-    );
+    config = require(path.resolve('./example/licence-checker.config.js'));
 }
 
 const packagePath = config.package || './package.json';

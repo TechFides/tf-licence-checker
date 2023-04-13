@@ -1,15 +1,17 @@
-NPM Techfides License Checker
+NPM Techfides Licence Checker
 ===================
 
 Check your installed packages and their licences against allowed licences list.
 
 Installation:
 ```
- npm install - g tf-licence-checker --save-dev
+ npm install -g tf-licence-checker --save-dev
 ```
 
 Create config file in your project
   * example: `licence-checker.config.js`
+
+If licence checker not found config file, default will be used
 
 Config options
 --------------
@@ -23,8 +25,34 @@ Config example
 ```
 const config = {
   allowedLicenses: [
+    '(Apache-2.0 OR MPL-1.1)',
+    '(BSD-2-Clause OR WTFPL)',
+    '(CC-BY-4.0 AND MIT)',
+    '(MIT AND BSD-3-Clause)',
+    '(MIT AND CC-BY-3.0)',
+    '(MIT AND Zlib)',
+    '(MIT OR Apache-2.0)',
+    '(MIT OR CC0-1.0)',
+    '(Unlicense OR Apache-2.0)',
+    '(WTFPL OR MIT)',
+    '0BSD',
+    'AFLv2.1',
+    'Apache 2.0',
+    'Apache License, Version 2.0',
+    'Apache-2.0',
+    'Apache2',
+    'BSD-2-Clause',
+    'BSD-3-Clause OR MIT',
+    'BSD-3-Clause',
+    'CC-BY-3.0',
+    'CC-BY-4.0',
+    'CC0-1.0',
     'ISC',
     'MIT',
+    'MIT,Apache2',
+    'MPL-1.1',
+    'WTFPL',
+    'Zlib',
   ],
   ignoredPackages: [],
   package: './package.json',
@@ -87,8 +115,8 @@ stages:
     - install
     - licence
 
-license:
-  stage: license
+licence:
+  stage: licence
   needs:
     - install
   interruptible: true
