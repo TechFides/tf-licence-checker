@@ -5,7 +5,7 @@ Check your installed packages and their licences against allowed licences list.
 
 Installation:
 ```
- npm install -g tf-licence-checker --save-dev
+ npm install tf-licence-checker --save-dev
 ```
 
 Create config file in your project
@@ -66,12 +66,15 @@ Usage
 -----
 
 Report show table with installed packages and blacklisted licences used in your project.
+
+Add script to your package.json file:
 ```
-tf-licence-checker --config={pathToConfig}
+"licence-checker": "tf-licence-checker --config={pathToConfig}"
 ```
-Or you can add script to your package.json file
+
+or to use default config:
 ```
-licence-checker: tf-licence-checker --config={pathToConfig}
+"licence-checker": "tf-licence-checker"
 ```
 
 and then run:

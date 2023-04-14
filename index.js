@@ -10,10 +10,10 @@ const { addPackagesToIndex, addLocalPackageData } = require('./packageParser.js'
 const configPath = args.config;
 let config;
 
-if (fs.existsSync(path.resolve(process.cwd(), configPath))) {
+if (configPath && fs.existsSync(path.resolve(process.cwd(), configPath))) {
     config = require(path.resolve(process.cwd(), configPath));
 } else {
-    config = require(path.resolve('./example/licence-checker.config.js'));
+    config = require('./example/licence-checker.config.js');
 }
 
 const packagePath = config.package || './package.json';
