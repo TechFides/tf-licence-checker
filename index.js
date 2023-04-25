@@ -3,9 +3,9 @@
 const fs = require('fs');
 const path = require('path');
 const args = require('yargs').argv;
-const formatAsTable = require('./formatter.js');
-const { getJsonDataFromFile, isNullOrUndefined } = require('./utils.js');
-const { addPackagesToIndex, addLocalPackageData } = require('./packageParser.js');
+const formatAsTable = require('./src/formatter.js');
+const { getJsonDataFromFile, isNullOrUndefined } = require('./src/utils.js');
+const { addPackagesToIndex, addLocalPackageData } = require('./src/packageParser.js');
 
 const configPath = args.config;
 let config;
