@@ -1,4 +1,4 @@
-NPM Techfides Licence Checker
+NPM [TechFides](https://team.techfides.cz/) Licence Checker
 ===================
 
 Check your installed packages and their licences against allowed licences list.
@@ -101,35 +101,4 @@ BLACKLISTED LICENSE AT MODULE NAME: ag-grid-enterprise
             | LICENSE: Commercial
             | AUTHOR: Niall Crosby <niall.crosby@ag-grid.com>
             | VERSION: 27.3.0
-```
-
-Gitlab CI/CD integration
-------------------------
-You can create CI/CD job that will automatically check licence and fail the job if there are a forbidden licences.
-
-Create script in your package.json file
-
-```
-licence-checker: tf-licence-checker --config={pathToConfig}
-```
-and then add stage to your .gitlab-ci.yml file
-```
-stages:
-    - install
-    - licence
-
-licence:
-  stage: licence
-  needs:
-    - install
-  interruptible: true
-  cache:
-    key: '$CI_COMMIT_REF_NAME-server-$CI_PIPELINE_ID'
-    paths:
-      - node_modules/
-    policy: pull
-  script:
-    - npm run licence-checker
-  tags:
-    - docker 
 ```

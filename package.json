@@ -18,7 +18,7 @@
     "yargs": "^17.6.2"
   },
   "keywords": [],
-  "author": "Techfides",
+  "author": "TechFides Solutions s.r.o.",
   "license": "MIT",
   "description": "Check allowed licences in your project",
   "devDependencies": {
